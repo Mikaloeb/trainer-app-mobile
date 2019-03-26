@@ -5,14 +5,13 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "eject": "expo eject",
-    "test": "node_modules/.bin/jest",
-    "test:debug": "node --inspect-brk node_modules/jest/bin/jest.js --runInBand"
+    "test": "jest"
   },
   "jest": {
     "preset": "jest-expo",
-    "watchPathIgnorePatterns": [
-      "<rootDir>/node_modules/"
-    ]
+    "transform": {
+      "\\.js$": "<rootDir>/node_modules/react-native/jest/preprocessor.js"
+    }
   },
   "dependencies": {
     "@expo/samples": "2.1.1",
